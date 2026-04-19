@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <!-- H monogram mark -->
+  <rect x="0" y="8" width="3" height="24" rx="1.5" fill="#1B2A4A"/>
+  <rect x="0" y="18" width="18" height="3" rx="1.5" fill="#1B2A4A"/>
+  <rect x="15" y="8" width="3" height="24" rx="1.5" fill="#1B2A4A"/>
+  <!-- Teal accent dot -->
+  <circle cx="9" cy="6" r="2.5" fill="#2A9D8F"/>
+  <!-- Wordmark -->
+  <text x="28" y="28" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="400" fill="#1B2A4A" letter-spacing="1">HALLIDAY</text>
+</svg>

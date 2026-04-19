@@ -1,0 +1,52 @@
+---
+const faqs = [
+  {
+    q: 'What if I want to cancel?',
+    a: 'No long-term contract. Cancel anytime with 30 days notice. When you leave, we\'ll help you transition the site to another host if you want to keep it.',
+  },
+  {
+    q: 'Who owns the website?',
+    a: 'You do. The domain, the design, the content — all yours. We\'re your hosting and maintenance partner, not a platform you\'re locked into.',
+  },
+  {
+    q: 'What if I need a bigger change?',
+    a: 'Your monthly plan covers one hour of updates per month — perfect for text tweaks, new photos, or small adjustments. Bigger projects (new sections, major redesigns, lead capture forms, integrations) are quoted separately.',
+  },
+  {
+    q: 'How long does it take to launch?',
+    a: 'Typically two weeks from discovery call to live site, assuming you can provide copy and photos promptly.',
+  },
+  {
+    q: 'Do you do e-commerce or complex functionality?',
+    a: 'This program is designed for marketing sites — professional presence, lead generation, credibility. If you need a store, booking system, or complex app, that\'s a separate conversation (and Halliday does that work too, just under a different engagement model).',
+  },
+  {
+    q: 'What if I already have a site I just need managed?',
+    a: 'Get in touch — depending on the platform, we may be able to take over maintenance of your existing site instead of rebuilding.',
+  },
+];
+---
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-header reveal">
+      <p class="section-tag">Questions</p>
+      <h2 class="section-headline">The things <em>everyone asks.</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      {faqs.map((item) => (
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>{item.q}</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>{item.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

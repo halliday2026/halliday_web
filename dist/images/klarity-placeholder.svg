@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#E9EDEF"/>
+  <rect x="40" y="40" width="520" height="60" rx="4" fill="#D0D8DB"/>
+  <rect x="40" y="120" width="260" height="200" rx="4" fill="#D0D8DB"/>
+  <rect x="320" y="120" width="240" height="90" rx="4" fill="#D0D8DB"/>
+  <rect x="320" y="230" width="240" height="90" rx="4" fill="#D0D8DB"/>
+  <rect x="40" y="340" width="160" height="60" rx="4" fill="#2A9D8F" opacity="0.4"/>
+  <text x="300" y="410" font-family="Helvetica, sans-serif" font-size="13" fill="#6B7D85" text-anchor="middle">Replace with klarityinternational.com screenshot</text>
+</svg>
