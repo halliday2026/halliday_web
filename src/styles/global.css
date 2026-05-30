@@ -439,12 +439,21 @@ ul {
   margin-bottom: 3rem;
 }
 
-.wyg-grid {
+.wyg-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.wyg-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 2rem;
+}
+
+.wyg-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 760px;
 }
 
 .wyg-item {
@@ -471,6 +480,47 @@ ul {
   font-size: 0.9rem;
   color: var(--grey-warm);
   line-height: 1.6;
+}
+
+/* ─── Why Peace of Mind ──────────────────────────────────── */
+.pom-section {
+  padding: var(--section-pad);
+  background: var(--white);
+}
+
+.pom-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.pom-points {
+  display: flex;
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.pom-point {
+  flex: 1;
+  border-top: 2px solid var(--teal-light);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pom-point-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.pom-point-sub {
+  font-size: 0.85rem;
+  color: var(--grey-mid);
+  font-style: italic;
 }
 
 /* ─── How It Works ───────────────────────────────────────── */
@@ -898,8 +948,16 @@ ul {
     order: 2;
   }
 
-  .wyg-grid {
+  .wyg-row-3,
+  .wyg-row-2 {
     grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pom-points {
+    flex-direction: column;
     max-width: 480px;
     margin: 0 auto;
   }
@@ -926,8 +984,13 @@ ul {
     margin: 0 auto;
   }
 
-  .wyg-grid {
+  .wyg-row-3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wyg-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
   }
 
   .who-grid {
