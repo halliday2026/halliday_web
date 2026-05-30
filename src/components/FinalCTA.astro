@@ -1,5 +1,6 @@
 ---
-const mailto = 'mailto:web@hallidayinc.com?subject=Managed%20Website%20Program%20Inquiry';
+// TODO: Replace YOUR_FORM_ID with your Formspree form ID from formspree.io/forms
+const formspreeEndpoint = 'https://formspree.io/f/mjgzzllw';
 ---
 <section class="cta-section" id="contact">
   <div class="container reveal">
@@ -11,10 +12,59 @@ const mailto = 'mailto:web@hallidayinc.com?subject=Managed%20Website%20Program%2
       30-minute discovery call. No pressure. Find out if the program is a fit for you.
     </p>
 
-    <a href={mailto} class="btn btn-coral">Start the Conversation</a>
+    <form
+      action={formspreeEndpoint}
+      method="POST"
+      class="cta-form"
+      id="cta-form"
+    >
+      <div class="cta-form-row">
+        <div class="cta-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+        <div class="cta-field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+      </div>
+      <div class="cta-field">
+        <label for="message">Anything you'd like us to know? <span class="cta-optional">(optional)</span></label>
+        <textarea id="message" name="message" rows="3" placeholder="Tell us about your business or what you're looking for..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-coral cta-submit">Send My Info</button>
+    </form>
 
-    <p class="cta-email-link">
-      Or email us directly at <a href={mailto}>web@hallidayinc.com</a>
+    <p class="cta-form-success" id="cta-success" aria-live="polite">
+      Thanks — we'll be in touch within one business day.
     </p>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById('cta-form') as HTMLFormElement | null;
+  const success = document.getElementById('cta-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+
+    if (res.ok) {
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Send My Info';
+      alert('Something went wrong — please email us directly at web@hallidayinc.com');
+    }
+  });
+</script>
