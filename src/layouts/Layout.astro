@@ -33,6 +33,8 @@ const {
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 
+    <!-- Force HTTPS -->
+    <script>if(location.protocol==='http:')location.replace('https:'+location.href.slice(5));</script>
   </head>
   <body>
     <slot />
