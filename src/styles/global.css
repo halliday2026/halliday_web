@@ -448,12 +448,10 @@ ul {
 
 .wyg-row-3 {
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 2rem;
 }
 
-.wyg-row-2 {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 760px;
+.wyg-row-3 + .wyg-row-3 {
+  margin-top: 2rem;
 }
 
 .wyg-item {
@@ -1018,8 +1016,7 @@ ul {
     order: 2;
   }
 
-  .wyg-row-3,
-  .wyg-row-2 {
+  .wyg-row-3 {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin-left: auto;
@@ -1056,11 +1053,6 @@ ul {
 
   .wyg-row-3 {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .wyg-row-2 {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
   }
 
   .who-grid {
